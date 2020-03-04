@@ -1,0 +1,38 @@
+{
+  "name": "vue-implicit-css-modules",
+  "version": "0.1.1",
+  "description": "Implicitly replace class names using Vue css modules",
+  "homepage": "https://github.com/AjiTae/vue-implicit-css-modules",
+  "bugs": "https://github.com/AjiTae/vue-implicit-css-modules/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AjiTae/vue-implicit-css-modules.git"
+  },
+  "keywords": [
+    "Vue",
+    "css",
+    "css-modules",
+    "cssmodules",
+    "replace",
+    "sfc"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p . "
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "vue": "^2.6.11",
+    "typescript": "^3.8.3"
+  }
+}
