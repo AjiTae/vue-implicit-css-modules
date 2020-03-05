@@ -23,8 +23,8 @@
     "build": "tsc -p . "
   },
   "files": [
-    "dist",
-    "types"
+    "dist/**/*",
+    "types/**/*"
   ],
   "dependencies": {
   },
