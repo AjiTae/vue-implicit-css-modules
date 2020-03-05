@@ -9,7 +9,7 @@ const configurable = true, enumerable = true, writable = true;
 function createElementWraper(value: CreateElement, vm: Vue) {
   return {
     value: function (tag: any, data: any, ...args: any) {
-      if ('$style' in vm && !Array.isArray(data) && !isPrimitive(data))
+      if (data && '$style' in vm && !Array.isArray(data) && !isPrimitive(data))
         replaceClasses(vm, data);
 
       return value.call(this, tag, data, ...args);
@@ -21,7 +21,7 @@ function createElementWraper(value: CreateElement, vm: Vue) {
 }
 
 function isImplicitModule(vm: Vue) {
-  return vm && (!options.unsafe || vm.$options && vm.$options.implicitCssModule)
+  return vm && (options.unsafe || vm.$options && vm.$options.implicitCssModule)
 }
 
 function createPropertyDefinition(name: string) {
