@@ -1,5 +1,6 @@
 import { VNodeData } from 'vue/types/vnode';
 import { Vue } from 'vue/types/vue';
+import { Dictionary } from '../types/global';
 import options from './options';
 
 type VNodeClass = string | Dictionary<string> | Array<VNodeClass> | unknown;
@@ -12,7 +13,6 @@ export function isPrimitive (value: unknown) {
   return (
       typeof value === 'string' ||
       typeof value === 'number' ||
-      // $flow-disable-line
       typeof value === 'symbol' ||
       typeof value === 'boolean'
   )

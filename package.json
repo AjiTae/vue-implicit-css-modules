@@ -14,13 +14,15 @@
     "css-modules",
     "cssmodules",
     "replace",
+    "plugin",
     "sfc"
   ],
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p . "
+    "build": "tsc -p . ",
+    "prepare" : "yarn build"
   },
   "files": [
     "dist/**/*",

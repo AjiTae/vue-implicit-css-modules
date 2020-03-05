@@ -1,7 +1,7 @@
 import { Vue, CreateElement, VueConstructor } from 'vue/types/vue';
-import { PluginFunction } from 'vue/types/plugin';
-import { ComponentOptions } from 'vue/types/options';
-import { isPrimitive, replaceClasses } from './class';
+import { PluginObject } from 'vue/types/plugin';
+import { Dictionary } from "../types/global";
+import { isObject, isPrimitive, replaceClasses } from './class';
 import options, { Options } from './options';
 
 const configurable = true, enumerable = true, writable = true;
@@ -46,7 +46,7 @@ const $createElement = createPropertyDefinition('$createElement');
 
 declare module 'vue/types/options' {
   interface ComponentOptions<V extends Vue> {
-    implicitCssModule?: boolean; // todo more
+    implicitCssModule?: boolean;
   }
 }
 
@@ -69,9 +69,13 @@ export default {
     if (!('FunctionalRenderContext' in Vue))
       throw new Error('Can not find FunctionalRenderContext. Unsupported Vue version.');
 
-    Object.assign(options, opts);
+    if('global' in opts && isObject<Dictionary<string>>(opts.global))
+      options.global = opts.global;
+
+    if('unsafe' in opts && typeof opts.unsafe === 'boolean')
+      options.unsafe = opts.unsafe;
 
     Object.defineProperties(Vue.prototype, {_c, $createElement});
     Object.defineProperties(Vue.FunctionalRenderContext.prototype, {_c});
-  } as PluginFunction<Options>
-}
+  }
+} as PluginObject<Options>

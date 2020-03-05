@@ -1,3 +1,5 @@
+import { Dictionary } from "../types/global";
+
 export interface Options {
   global?: Dictionary<string>,
   unsafe?: boolean

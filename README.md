@@ -41,7 +41,7 @@ With the introduction of css modules in Vue, you have to write explicit code:
 </template>
 
 ``` 
-With `vue-implicit-css-modules` eou can write classes as is:
+With `vue-implicit-css-modules` you can write classes as is:
 ```html
 <template>
   <div>

@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "module": "commonjs",
     "strict": true,
     "moduleResolution": "node",
     "sourceMap": true,
     "baseUrl": ".",
     "outDir": "dist",
-    "declaration": true
+    "declaration": true,
+    "types": []
   },
   "libs": [
     "es2015"
