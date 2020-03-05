@@ -1,7 +1,5 @@
 # vue-implicit-css-modules
 
-[![npm](https://img.shields.io/npm/v/vue-implicit-css-modules.svg)](https://www.npmjs.com/package/vue-implicit-css-modules) [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
-
 > Implicitly replace class names using Vue css modules
 
 ## Installation
@@ -11,9 +9,6 @@ npm install --save vue-implicit-css-modules # npm
 yarn add vue-implicit-css-modules # yarn
 ```
 
-## Usage
-
-### Plugin
 
 ```js
 import Vue from 'vue'
@@ -25,8 +20,7 @@ Vue.use(VueImplicitCssModules, {
   unsafe: true // false by default
 })
 ```
-
-### Component
+## Usage
 With the introduction of css modules in Vue, you have to write explicit code:
 ```html
 <template>
@@ -41,7 +35,7 @@ With the introduction of css modules in Vue, you have to write explicit code:
 </template>
 
 ``` 
-With `vue-implicit-css-modules` you can write classes as is:
+With `vue-implicit-css-modules` you can define classes as is:
 ```html
 <template>
   <div>
@@ -75,7 +69,7 @@ With `vue-implicit-css-modules` you can write classes as is:
 </style>
 
 ```
-and get same result:
+and get the same result:
 ```html
 <div>
   <p :class="red_1VyoJ-uZ">
