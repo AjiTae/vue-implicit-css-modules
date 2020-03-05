@@ -1,6 +1,6 @@
 {
   "name": "vue-implicit-css-modules",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Implicitly replace class names using Vue css modules",
   "homepage": "https://github.com/AjiTae/vue-implicit-css-modules",
   "bugs": "https://github.com/AjiTae/vue-implicit-css-modules/issues",
